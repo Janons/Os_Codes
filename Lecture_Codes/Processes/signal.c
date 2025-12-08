@@ -6,8 +6,9 @@
 
 //basic functions to handle a signal
 
-void handle(int sig, int timer){
-    printf("Recieved signal %d at time %d\n ", sig, timer);
+void handle(int sig){
+    printf("Recieved signal %d  ", sig);
+    printf("Are we even here?");
     exit(1);
 }
 
@@ -26,8 +27,8 @@ int main(){
 
         //the condition
         if (i == 4){ 
-            signal(SIGTSTP,handle);
-            kill(getpid(), SIGTSTP);
+
+            raise(SIGTSTP);
 
         }
 
