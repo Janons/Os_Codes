@@ -49,12 +49,12 @@ int main(int argc, char* argv[]){
             if (int_holder %2 == 0){
                 printf("%d is even\n", int_holder);
 
-                fwrite(&int_holder, sizeof(int_holder),1,even_ptr);
+                fprintf(even_ptr, "%d\n", int_holder);
                 
             }
 
             else{
-                fwrite(&int_holder, sizeof(int_holder),1,odd_ptr);
+                fprintf(odd_ptr, "%d\n", int_holder);
             }
 
 
