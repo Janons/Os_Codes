@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#Sum and Product
+
+clear
+
+echo -n "Reading i1"
+
+read i1
+
+echo -n "Reading i2"
+read i2
+
+sum=$(expr $i1 + $i2)
+
+multp=$(expr $i1 \* $i2)
+
+echo $sum
+echo $multp
