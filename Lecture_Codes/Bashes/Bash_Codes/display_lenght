@@ -1,0 +1,16 @@
+#! /bin/bash
+
+#lenght of  a string
+
+echo -e  "Write the command please: \n"
+read command
+
+#
+l=$(echo -n  $command | wc -c)
+
+
+echo "$command  is of lenght $l"
+
+
+
+exit 0
