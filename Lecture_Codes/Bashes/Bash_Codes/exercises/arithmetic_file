@@ -1,0 +1,22 @@
+#!/bin/bash
+
+
+## give the file a value
+input="arithmetic.txt"
+
+while IFS= read -r line
+do
+sum=0
+	echo "a line : $line"
+
+for num in $line
+do ((sum += num))
+done
+
+echo "Line: $line | Sum : $sum"
+ 
+done < "$input"
+
+
+exit 0
+
