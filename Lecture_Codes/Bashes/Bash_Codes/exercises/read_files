@@ -1,0 +1,24 @@
+#!/bin/bash
+
+count=1;
+
+## line by line and word
+while read -ra line
+do
+echo "reading line $count"
+
+echo "Line : ${line[*]}"
+
+#increment the counter
+count=$((count + 1))
+
+
+
+done < "$1"
+
+## just word
+for i in $(cat $1); do
+echo "Word: $i"
+done
+
+
